@@ -1,0 +1,141 @@
+html {
+  margin: 0;
+  padding: 0
+}
+
+:root, [data-color-mode=light][data-dark-theme*=light], [data-color-mode=light][data-light-theme*=light] {
+  --primary: #8f8fff;
+  --light-grey: #f3f3f3;
+  --dark-grey: #3b3b3b;
+  --white: #ffffff;
+  --black: #1f1f1f
+}
+
+:root, [data-color-mode=dark][data-dark-theme*=dark], [data-color-mode=dark][data-light-theme*=dark] {
+  --primary: #8cff46;
+  --light-grey: #3b3b3b;
+  --dark-grey: #d4d4d4;
+  --white: #393939;
+  --black: #ffffff
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  background: var(--white)
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0
+}
+
+ul {
+  padding: 0;
+  margin: 0
+}
+
+.h50 {
+  height: 50px;
+  width: 100%;
+  display: block
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px
+}
+
+.navigation-container {
+  background: var(--light-grey);
+  position: fixed;
+  width: 100%;
+  top: 0
+}
+
+.c-1400 {
+  max-width: 1400px;
+  margin: auto
+}
+
+.header {
+  display: flex;
+  justify-content: space-between
+}
+
+.header .header__nav, .header__right_nav {
+  display: flex;
+  list-style: none;
+  justify-content: center
+}
+
+.header_item {
+  padding: 15px 10px
+}
+
+.header_item a {
+  color: var(--dark-grey);
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none
+}
+
+.header__nav .header_item a:hover {
+  color: var(--primary);
+  transition: all .3s ease
+}
+
+.hero-section {
+  height: 500px
+}
+
+.hero-content__title {
+  text-align: center
+}
+
+.big-blog {
+  padding: 10px;
+  margin: 20px
+}
+
+.big-blog__title {
+  font-size: 20px;
+  color: var(--dark-grey);
+  margin-bottom: 20px
+}
+
+.big-blog__cover {
+  width: 100%
+}
+
+.btn {
+  border: 1px solid grey;
+  padding: 5px 5px;
+  color: var(--black);
+  outline: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all .4s ease;
+  background: var(--white)
+}
+
+.para {
+  color: var(--dark-grey)
+}
+
+.btn:hover {
+  background: var(--primary);
+  color: var(--light-grey)
+}
+
+.fa-sun {
+  color: var(--black)
+}
+
+.fa-moon {
+  color: var(--black)
+}
