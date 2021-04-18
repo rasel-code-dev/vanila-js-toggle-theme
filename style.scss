@@ -1,135 +1,152 @@
+@import "./scss/index.scss";
 
-html{
+html {
   margin: 0px;
   padding: 0px;
 }
 
-
-:root, [data-color-mode=light][data-dark-theme*=light], [data-color-mode=light][data-light-theme*=light] {
-    --primary: #8f8fff;
-    --light-grey: #f3f3f3;
-    --dark-grey: #3b3b3b;
-    --white: #ffffff;
-    --black: #1f1f1f;
-}
-
-:root, [data-color-mode=dark][data-dark-theme*=dark], [data-color-mode=dark][data-light-theme*=dark] {
-  --primary: #8cff46;
-  --light-grey: #3b3b3b;
-  --dark-grey: #d4d4d4;
-  --white: #393939;
-  --black: #ffffff;
-}
-
-
-body{
+body {
   margin: 0px;
   padding: 0px;
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  background: var(--white);
+  background: var(--color-bg-canvas);
 }
 
 
-h1,h2,h3{
+h1,
+h2,
+h3 {
   margin: 0;
   padding: 0;
 }
 
-
-ul{
+ul {
   padding: 0px;
   margin: 0px;
 }
 
+section {}
 
-
-section{
-
-}
-.h50{
+.h50 {
   height: 50px;
   width: 100%;
   display: block;
 }
 
-.container{
+.container {
   max-width: 1200px;
   margin: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
-.navigation-container{
-  background: var(--light-grey);
+
+.navigation-container {
+  background: var(--color-navigation-bg);
   position: fixed;
   width: 100%;
   top: 0;
-  
+
 }
-.c-1400{
+
+.c-1400 {
   max-width: 1400px;
   margin: auto;
 }
-.header{
+
+.header {
   display: flex;
   justify-content: space-between;
+
+  .header__right_nav,
+  .header__nav {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+  }
+
+
+  .header_item {
+    padding: 15px 10px;
+
+    a {
+      color: var(--color-text-title);
+      font-family: "Poppins";
+      font-weight: 500;
+      font-size: 14px;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--primary);
+        transition: all .3s ease;
+      }
+    }
+  }
+
+  #open-color-patel {
+    color: var(--primary);
+    display: flex;
+
+    span {
+      display: block;
+      width: 2px;
+      height: 14px;
+      margin: 1px;
+
+      &:nth-child(1) {
+        background: green;
+      }
+
+      &:nth-child(2) {
+        background: red;
+      }
+
+      &:nth-child(3) {
+        background: orange;
+      }
+
+      &:nth-child(4) {
+        background: cyan;
+      }
+
+      &:nth-child(5) {
+        background: deeppink;
+      }
+    }
+
+  }
 }
 
-.header .header__nav, .header__right_nav{
-  display: flex;
-  list-style: none;
-  justify-content: center;
-}
-.header_item{
-  padding: 15px 10px;
-}
-.header_item a{
-  color: var(--dark-grey);
-  font-family: "Poppins";
-  font-weight: 500;
-  font-size: 14px;
-  text-decoration: none;
-}
-.header__nav .header_item a:hover{
-  color: var(--primary);
-  transition: all .3s ease;
-}
-
-
-
-
-
-
-.hero-section{
+.hero-section {
   /*background: red;*/
   height: 500px;
 }
 
-.hero-content__title{
+.hero-content__title {
   text-align: center;
 }
 
 
 
-.big-blog{
+.big-blog {
   /*background: #f3f3f3;*/
   padding: 10px;
   margin: 20px;
 }
-.big-blog__title{
+
+.big-blog__title {
   font-size: 20px;
-  color: var(--dark-grey);
+  color: var(--color-text-title);
   margin-bottom: 20px;
 }
-.big-blog__cover{
+
+.big-blog__cover {
   width: 100%;
 }
 
-.big-blog__meta{
-
-}
+.big-blog__meta {}
 
 
-.btn{
+.btn {
   border: 1px solid grey;
   padding: 5px 5px;
   color: var(--black);
@@ -139,15 +156,56 @@ section{
   transition: all .4s ease;
   background: var(--white);
 }
-.para{
+
+.para {
   color: var(--dark-grey);
 }
 
-.btn:hover{
+.btn:hover {
   background: var(--primary);
   color: var(--light-grey);
 }
 
-.fa-sun{ color: var(--black) }
-.fa-moon{ color: var(--black) }
+.fa-sun {
+  color: var(--black)
+}
 
+.fa-moon {
+  color: var(--black)
+}
+
+.colors{
+  display: none;
+  flex-wrap: wrap;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: fixed;
+  z-index: 24;
+  background: white;
+  box-shadow: 0px 4px 4px 1px #5b5b5b3b;
+
+  .item {
+    margin: 0px 2px;
+    user-select: none;
+
+    .color_name {
+      font-size: 12px;
+      color: #282828;
+      border: none;
+      outline: none;
+      background: white;
+    }
+
+    .color_view {
+      width: 100px;
+      height: 30px;
+      display: block;
+      cursor: pointer;
+    }
+  }
+}
+
+
+.show {
+  display: flex;
+}

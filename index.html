@@ -5,10 +5,13 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vite App</title>
-  <link rel="stylesheet" href="http://localhost:1000/static/fontawesome-pro-5.12.0-web/css/all.css">
-  <link rel="stylesheet" href="http://localhost:1000/static/fonts/roboto.css">
-  <link rel="stylesheet" href="http://localhost:1000/static/fonts/poppins.css">
+<!--  <link rel="stylesheet" href="http://localhost:1000/static/fontawesome-pro-5.12.0-web/css/all.css">-->
+<!--  <link rel="stylesheet" href="http://localhost:1000/static/fonts/roboto.css">-->
+<!--  <link rel="stylesheet" href="http://localhost:1000/static/fonts/poppins.css">-->
   <link rel="stylesheet" href="./main.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  
 </head>
 
 <body>
@@ -22,7 +25,15 @@
         <li class="header_item"><a href="#">About</a></li>
       </ul>
       <ul class="header__right_nav">
+        <li id="open-color-patel" class="header_item">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </li>
+    
         <li id="toggle_theme" data-theme="dark" class="header_item"><i style="pointer-events: none" class="fa fa-moon"></i></li>
+        
       </ul>
     </nav>
   </div>
@@ -30,6 +41,10 @@
 
 <div class="h50" ></div>
 
+<!-- choose color pallet -->
+<section>
+  <div class="colors"></div>
+</section>
 
 <!-- hero section -->
 <section class="hero-section">
@@ -44,8 +59,57 @@
 
 </section>
 
-<!--<script type="module" src="/main.js"></script>-->
+<h3>Chat Message</h3>
+<section id="show-message"></section>
+
+
+<section style="margin-top: 50px">
+  <input type="text" name="message" />
+  <button class="send">send</button>
+</section>
+
+<!-- <script type="module" src="/main.js"></script> -->
 <script src="./main.js"></script>
+
+<!--<script src="./node_modules/ws/browser.js"></script>-->
+
+<script >
+  
+  
+
+//  (function(){
+//    let ws;
+//    function init(){
+//      if(ws){
+//        ws.onerror = ws.onopen = ws.onclose = null
+//        ws.close();
+//      }
+//
+//      ws = new WebSocket("ws://localhost:4000")
+//
+//      ws.onopen = ()=>{
+//        ws.send("this is send from client")
+//      }
+//
+//      ws.onmessage = (data) =>{
+//        showMessage.innerHTML += `<p>${data.data}</p>`
+//      };
+//    }
+//
+//    init()
+//
+//    const showMessage = document.querySelector("#show-message")
+//    const messageText = document.querySelector("input")
+//    const sendButton = document.querySelector(".send")
+//    sendButton.addEventListener("click", (e)=>{
+//      ws.send(messageText.value)
+//      showMessage.innerHTML += `<p>${messageText.value}</p>`
+//    })
+//
+//  })()
+  
+</script>
+
 
 </body>
 </html>
